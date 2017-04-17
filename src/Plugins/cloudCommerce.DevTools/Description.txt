@@ -1,0 +1,8 @@
+FriendlyName: cloudCommerce.NET Developer Tools (MiniProfiler and other goodies)
+SystemName: cloudCommerce.DevTools
+Group: Developer
+Version: 2.6.0
+MinAppVersion: 2.5.0
+DisplayOrder: 1
+FileName: cloudCommerce.DevTools.dll
+ResourceRootKey: Plugins.Developer.DevTools

@@ -1,0 +1,14 @@
+@{
+    Layout = "";
+}
+@model cloudCommerce.PayPal.Models.PayPalExpressPaymentInfoModel
+@using cloudCommerce.Web.Framework;
+
+@if (Model.CurrentPageIsBasket)
+{
+    <div class="form-horizontal">
+        <a href='@Url.Action("SubmitButton", "PayPalExpress", new { area = "cloudCommerce.PayPal" })'>
+            <img id="paypal-express-button" alt="" src="@Model.SubmitButtonImageUrl" />
+        </a>
+    </div>
+}

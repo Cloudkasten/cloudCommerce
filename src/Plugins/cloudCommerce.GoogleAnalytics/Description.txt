@@ -1,0 +1,9 @@
+FriendlyName: Google Analytics
+SystemName: cloudCommerce.GoogleAnalytics
+Group: Analytics
+Version: 2.6.0
+MinAppVersion: 2.5.0
+DisplayOrder: 1
+FileName: cloudCommerce.GoogleAnalytics.dll
+ResourceRootKey: Plugins.Widgets.GoogleAnalytics
+Url: http://community.smartstore.com/marketplace/file/25-google-analytics/

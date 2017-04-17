@@ -1,0 +1,10 @@
+FriendlyName: Google Merchant Center (GMC) feed
+SystemName: cloudCommerce.GoogleMerchantCenter
+Group: Marketing
+Version: 2.6.0
+MinAppVersion: 2.5.0
+Author: cloudCommerce AG
+DisplayOrder: 1
+FileName: cloudCommerce.GoogleMerchantCenter.dll
+ResourceRootKey: Plugins.Feed.Froogle
+Url: http://community.smartstore.com/marketplace/file/37-google-merchant-center-gmc-feed/

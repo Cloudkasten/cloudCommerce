@@ -1,0 +1,10 @@
+FriendlyName: cloudCommerce.NET Web Api
+SystemName: cloudCommerce.WebApi
+Version: 2.6.0
+Group: Api
+MinAppVersion: 2.5.0
+Author: cloudCommerce AG
+DisplayOrder: 1
+FileName: cloudCommerce.WebApi.dll
+ResourceRootKey: Plugins.Api.WebApi
+Url: http://community.smartstore.com/marketplace/file/27-smartstorenet-web-api/

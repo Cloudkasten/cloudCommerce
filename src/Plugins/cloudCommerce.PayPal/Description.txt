@@ -1,0 +1,10 @@
+FriendlyName: PayPal
+Description: Provides the PayPal payment methods PayPal Standard, PayPal Direct, PayPal Express and PayPal PLUS.
+SystemName: cloudCommerce.PayPal
+Group: Payment
+Version: 2.6.0
+MinAppVersion: 2.5.0
+DisplayOrder: 1
+FileName: cloudCommerce.PayPal.dll
+ResourceRootKey: Plugins.cloudCommerce.PayPal
+Url: http://community.smartstore.com/marketplace/file/29-paypal-payment-plugins/

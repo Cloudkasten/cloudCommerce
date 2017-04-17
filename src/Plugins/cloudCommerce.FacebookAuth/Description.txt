@@ -1,0 +1,8 @@
+FriendlyName: Facebook
+SystemName: cloudCommerce.FacebookAuth
+Group: Security
+Version: 2.6.0
+MinAppVersion: 2.5.0
+DisplayOrder: 5
+FileName: cloudCommerce.FacebookAuth.dll
+ResourceRootKey: Plugins.ExternalAuth.Facebook

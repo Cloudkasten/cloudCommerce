@@ -1,0 +1,9 @@
+FriendlyName: Default Tax Providers
+Description: Contains default tax providers like FixedRate, ByRegion etc.
+Group: Tax
+SystemName: cloudCommerce.Tax
+Version: 2.6.0
+MinAppVersion: 2.5.0
+DisplayOrder: 0
+FileName: cloudCommerce.Tax.dll
+ResourceRootKey: Plugins.cloudCommerce.Tax

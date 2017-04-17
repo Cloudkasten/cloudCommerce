@@ -1,0 +1,1 @@
+ProductManufacturers.cshtml löschen wenn es in ProductTemplate.VariantsInGrid.cshtml eleminiert wurde

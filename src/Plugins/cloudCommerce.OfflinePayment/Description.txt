@@ -1,0 +1,9 @@
+FriendlyName: Offline Payment Methods
+Description: Contains common offline payment methods like Direct Debit, Invoice, Prepayment etc.
+Group: Payment
+SystemName: cloudCommerce.OfflinePayment
+Version: 2.6.0
+MinAppVersion: 2.5.0
+DisplayOrder: 0
+FileName: cloudCommerce.OfflinePayment.dll
+ResourceRootKey: Plugins.cloudCommerce.OfflinePayment

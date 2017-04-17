@@ -1,0 +1,10 @@
+FriendlyName: Pay with Amazon
+SystemName: cloudCommerce.AmazonPay
+Version: 2.6.0
+Group: Payment
+MinAppVersion: 2.5.0
+Author: cloudCommerce AG
+DisplayOrder: 1
+FileName: cloudCommerce.AmazonPay.dll
+ResourceRootKey: Plugins.Payments.AmazonPay
+Url: http://community.smartstore.com/marketplace/file/11-amazon-payments-plugin/

@@ -1,0 +1,10 @@
+@model PollModel
+@using cloudCommerce.Web.Models.Polls;
+<div class="block block-bordered block-poll">
+    <div class="block-title">
+        @T("Polls.Title")
+    </div>
+    <div class="block-body listbox">
+        @Html.Partial("_Poll", Model)
+    </div>
+</div>

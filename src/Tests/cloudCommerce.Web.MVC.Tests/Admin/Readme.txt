@@ -1,0 +1,1 @@
+This folder contains tests for cloudCommerce.Admin project (admin area)

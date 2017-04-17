@@ -1,0 +1,8 @@
+@model string
+
+@if (!String.IsNullOrWhiteSpace(Model))
+{
+    <div class="product-share-button line">
+        @Html.Raw(Model)
+    </div>
+}

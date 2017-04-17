@@ -1,0 +1,10 @@
+@model ShoppingCartModel
+@using cloudCommerce.Web.Models.ShoppingCart;
+@if (Model.DisplayCommentBox)
+{
+    <div class="comment-box">
+        <div class="title"><strong>@T("ShoppingCart.CommentBox")</strong></div>
+        
+        @Html.TextAreaFor(model => model.CustomerComment, new { placeholder = "Optional" })
+    </div>
+}

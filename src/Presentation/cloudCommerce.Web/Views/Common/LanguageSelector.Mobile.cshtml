@@ -1,0 +1,26 @@
+@model LanguageSelectorModel
+@using cloudCommerce.Web.Models.Common;
+@using cloudCommerce.Core;
+@using cloudCommerce.Core.Infrastructure;
+@using cloudCommerce.Core.Infrastructure.DependencyManagement;
+
+@if (Model.AvailableLanguages.Count > 1)
+{
+    var webHelper = EngineContext.Current.Resolve<IWebHelper>();
+    
+    <div class="language-selector">
+        <div class="title">
+            @T("Languages")
+        </div>
+        <ul data-role="listview" data-inset="true" data-filter="false">
+            @foreach (var lang in Model.AvailableLanguages)
+            {
+                <li @(lang.Id == Model.CurrentLanguageId ? " data-icon=false" : null)>
+					<a href="@webHelper.ModifyQueryString(Url.RouteUrl("ChangeLanguage", new { langid = lang.Id }), "returnurl=" + Url.Encode(Model.ReturnUrls[lang.SeoCode]), null)" data-ajax="false" rel="nofollow">
+						@lang.Name
+					</a>
+				</li>
+            }
+        </ul>
+    </div>
+}

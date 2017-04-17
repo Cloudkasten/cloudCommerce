@@ -1,0 +1,18 @@
+@using cloudCommerce.DevTools.Models;
+@model BackendExtensionModel
+@{
+	Layout = "~/Administration/Views/Shared/_AdminLayout.cshtml";
+
+	ViewBag.Title = "My cloudCommerce.NET backend extension page";
+}
+
+<div class="section-header">
+	<div class="title">
+		<i class="fa fa-area-chart"></i>
+		My cloudCommerce.NET backend extension page
+	</div>
+</div>
+
+<div>
+	@Model.Welcome
+</div>

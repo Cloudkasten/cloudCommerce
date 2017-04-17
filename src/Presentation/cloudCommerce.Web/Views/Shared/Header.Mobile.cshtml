@@ -1,0 +1,11 @@
+@model ShopHeaderModel
+@using cloudCommerce.Web.Models.Common;
+
+@Html.Widget("mobile_headerlogo_before")
+<div data-role="header" data-position="inline" class="header-logo">
+	@if (Model.LogoUploaded)
+	{
+		<img src='@Url.Content(Model.LogoUrl)' alt="@Model.LogoTitle" title="@Model.LogoTitle" />
+	}
+</div>
+@Html.Widget("mobile_headerlogo_after")

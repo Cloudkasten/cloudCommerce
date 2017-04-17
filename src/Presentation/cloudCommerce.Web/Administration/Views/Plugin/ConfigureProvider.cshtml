@@ -1,0 +1,42 @@
+@model cloudCommerce.Web.Framework.Plugins.ProviderModel
+
+@{    
+    ViewBag.Title = T("Admin.Common.Configure").Text + " - " + Model.FriendlyName;
+}
+
+<div class="section-header">
+    <div class="title">
+		<img src="@Url.Content(Model.IconUrl)" alt="@Model.FriendlyName" />
+        @ViewBag.Title <span class="muted">(@(Model.SystemName))</span>
+		<a href="@ViewBag.ListUrl">(@T("Admin.Common.BackToList"))</a>
+    </div>
+	@if (Model.PluginDescriptor != null)
+	{
+		<div class="options">
+			<a class="btn" href='@Url.Action("UpdateStringResources", "Plugin", new { systemName = Model.PluginDescriptor.SystemName, returnUrl = Request.RawUrl })'>
+				<i class="fa fa-refresh"></i>
+				@T("Admin.Configuration.Plugins.Resources.Update")
+			</a>
+		</div>		
+	}
+</div>
+
+@if (Model.ConfigurationRoute != null && Model.ConfigurationRoute.Action.HasValue())
+{
+	try
+	{
+		@Html.Action(Model.ConfigurationRoute.Action, Model.ConfigurationRoute.Controller, Model.ConfigurationRoute.RouteValues);
+	}
+	catch (Exception exception)
+	{
+		<div class="alert alert-error">
+			@T("Admin.Configuration.Plugins.UnknownError")
+		</div>
+
+		<pre>@exception.ToString()</pre>
+	}
+}
+else
+{
+    @T("Admin.Common.ConfigurationNotRequired")
+}

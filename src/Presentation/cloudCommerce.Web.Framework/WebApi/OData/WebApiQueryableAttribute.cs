@@ -1,0 +1,58 @@
+using System;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+using System.Web.Http.Filters;
+
+namespace cloudCommerce.Web.Framework.WebApi.OData
+{
+	public class WebApiQueryableAttribute : QueryableAttribute
+	{
+		public bool PagingOptional { get; set; }
+
+		protected virtual bool MissingClientPaging(HttpActionExecutedContext actionExecutedContext)
+		{
+			if (PagingOptional)
+				return false;
+
+			try
+			{
+				var content = actionExecutedContext.Response.Content as ObjectContent;
+
+				if (content != null)
+				{
+					if (content.Value is HttpError)
+						return false;
+
+					if (content.Value is SingleResult)
+						return false;	// 'true' would result in a 500 'internal server error'
+				}
+
+				var query = actionExecutedContext.Request.RequestUri.Query;
+
+				bool missingClientPaging = query.IsEmpty() || !query.Contains("$top=");
+
+				if (missingClientPaging)
+				{
+					actionExecutedContext.Response = actionExecutedContext.Request.CreateErrorResponse(HttpStatusCode.BadRequest,
+						"Missing client paging. Please specify odata $top query option. Maximum value is {0}.".FormatWith(WebApiGlobal.MaxTop));
+
+					return true;
+				}
+			}
+			catch (Exception exc)
+			{
+				exc.Dump();
+			}
+			return false;
+		}
+
+		public override void OnActionExecuted(HttpActionExecutedContext actionExecutedContext)
+		{
+			if (MissingClientPaging(actionExecutedContext))
+				return;
+
+			base.OnActionExecuted(actionExecutedContext);
+		}
+	}
+}

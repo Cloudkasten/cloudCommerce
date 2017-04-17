@@ -1,0 +1,10 @@
+@{
+    Layout = "";
+}
+@using cloudCommerce.Web.Framework;
+@using cloudCommerce.OfflinePayment.Models;
+@model PurchaseOrderNumberPaymentInfoModel
+
+@Html.SmartLabelFor(model => model.PurchaseOrderNumber, false)
+@Html.TextBoxFor(model => model.PurchaseOrderNumber, new { autocomplete = "off" })
+@Html.ValidationMessageFor(model => model.PurchaseOrderNumber)
